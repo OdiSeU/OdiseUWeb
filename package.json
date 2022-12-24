@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "lerna": "^6.1.0"
+  },
+  "name": "OdiseUWeb",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/OdiSeU/OdiseUWeb.git",
+  "author": "OdiseU <secret36565@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "server:local": "cd ./projects/server && yarn local",
+    "server:dev": "cd ./projects/server && yarn dev"
+  }
+}
