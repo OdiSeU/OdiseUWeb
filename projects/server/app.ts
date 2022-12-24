@@ -1,9 +1,9 @@
 import express, { urlencoded, json } from 'express';
 import path from 'path';
 import cookieParser from 'cookie-parser';
+import Config from './services/config.service';
 
 const app = express();
-const PORT = 4000;
 
 // for link react client app
 const clientPath = path.join(path.resolve(), '../front/build');
@@ -21,6 +21,7 @@ app.use((requset, response, next) => {
 });
 
 // start server
-app.listen(PORT, ()=> {
-    console.log(`> Server on localhost:${PORT}`);
+app.listen(Config.SERVER_PORT, ()=> {
+    console.log(`> Server on ${Config.SERVER_HOST}:${Config.SERVER_PORT}`);
+    console.log(`> ${Config.ENV.toUpperCase()} MODE`);
 });
