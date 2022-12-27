@@ -58,6 +58,9 @@ abstract class Env {
         return Env._mode === 'prod';
     }
     
+    /**
+     * @returns process.env.NODE_ENV
+     */
     public static get mode(): string {
         if(!Env._mode) {
             Env.init();
