@@ -2,6 +2,7 @@ import express, { urlencoded, json } from 'express';
 import path from 'path';
 import cookieParser from 'cookie-parser';
 import Config from './services/config.service';
+import Env from './services/env.service';
 
 const app = express();
 
@@ -23,5 +24,5 @@ app.use((requset, response, next) => {
 // start server
 app.listen(Config.SERVER_PORT, ()=> {
     console.log(`> Server on ${Config.SERVER_HOST}:${Config.SERVER_PORT}`);
-    console.log(`> ${Config.ENV.toUpperCase()} MODE`);
+    console.log(`> ${Env.mode.toUpperCase()} MODE`);
 });
