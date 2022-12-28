@@ -3,7 +3,7 @@ import winstonDaily from 'winston-daily-rotate-file';
 import path from 'path';
 import Env from './env.service';
 
-const logDir = path.join(__dirname, '../logs');
+const logDir = path.join(__dirname, `../logs/${Env.mode}`);
 
 const logFormat = winston.format.printf(({ level, message, timestamp }) => {
    return `${timestamp} [${level}] : ${message}`;
