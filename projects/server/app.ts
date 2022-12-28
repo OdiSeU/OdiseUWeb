@@ -3,6 +3,7 @@ import path from 'path';
 import cookieParser from 'cookie-parser';
 import Config from './services/config.service';
 import Env from './services/env.service';
+import Logger from './services/logger.service';
 
 const app = express();
 
@@ -17,7 +18,7 @@ app.use(json());
 
 // middleware
 app.use((requset, response, next) => {
-    console.log(`[${requset.method}] ${requset.path}`);
+    Logger.info(`[${requset.method}] ${requset.path}`);
     next();
 });
 
