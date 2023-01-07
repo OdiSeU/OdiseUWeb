@@ -4,6 +4,7 @@ import cookieParser from 'cookie-parser';
 import Config from './services/config.service';
 import Env from './services/env.service';
 import Logger from './services/logger.service';
+import Morgan from './services/morgan.service';
 
 const app = express();
 
@@ -17,13 +18,10 @@ app.use(cookieParser());
 app.use(json());
 
 // middleware
-app.use((requset, response, next) => {
-    Logger.info(`[${requset.method}] ${requset.path}`);
-    next();
-});
+app.use(Morgan);
 
 // start server
 app.listen(Config.SERVER_PORT, ()=> {
-    console.log(`> Server on ${Config.SERVER_HOST}:${Config.SERVER_PORT}`);
-    console.log(`> ${Env.mode.toUpperCase()} MODE`);
+    Logger.debug(`> Server on ${Config.SERVER_HOST}:${Config.SERVER_PORT}`);
+    Logger.debug(`> ${Env.mode.toUpperCase()} MODE`);
 });
