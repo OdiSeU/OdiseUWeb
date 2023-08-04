@@ -5,8 +5,10 @@ import Config from "./services/config.service";
 import Env from "./services/env.service";
 import Logger from "./services/logger.service";
 import Morgan from "./services/morgan.service";
+import mongoDB from "./services/mongoose.service";
 
 const app = express();
+mongoDB.connect();
 
 // for link react client app
 const clientPath = path.join(path.resolve(), "../front/build");
