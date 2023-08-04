@@ -1,6 +1,7 @@
 {
   "dependencies": {
-    "lerna": "^6.1.0"
+    "lerna": "^6.1.0",
+    "mongoose": "^7.4.2"
   },
   "name": "OdiseUWeb",
   "version": "1.0.0",
