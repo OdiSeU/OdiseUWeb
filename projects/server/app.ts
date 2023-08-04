@@ -24,6 +24,6 @@ app.use(Morgan);
 
 // start server
 app.listen(Config.SERVER_PORT, () => {
-  Logger.debug(`> Server on ${Config.SERVER_HOST}:${Config.SERVER_PORT}`);
-  Logger.debug(`> ${Env.mode.toUpperCase()} MODE`);
+    Logger.debug(`> Server on ${Config.SERVER_HOST}:${Config.SERVER_PORT}`);
+    Logger.debug(`> ${Env.mode.toUpperCase()} MODE`);
 });

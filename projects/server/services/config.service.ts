@@ -1,4 +1,4 @@
-import Env from './env.service';
+import Env from "./env.service";
 
 interface IConfig {
     readonly SERVER_HOST: string;
@@ -9,11 +9,11 @@ interface IConfig {
 }
 
 const Config: IConfig = {
-    "SERVER_HOST": Env.get('SERVER_HOST'),
-    "SERVER_PORT": Env.get('SERVER_PORT'),
-    "MONGODB_URL": Env.get('MONGODB_URL'),
-    "MONGODB_NAME": Env.get('MONGODB_NAME'),
-    "GSI_CLIENT_ID": Env.get('GSI_CLIENT_ID'),
+    SERVER_HOST: Env.get("SERVER_HOST"),
+    SERVER_PORT: Env.get("SERVER_PORT"),
+    MONGODB_URL: Env.get("MONGODB_URL"),
+    MONGODB_NAME: Env.get("MONGODB_NAME"),
+    GSI_CLIENT_ID: Env.get("GSI_CLIENT_ID"),
 };
 
 export default Config;
